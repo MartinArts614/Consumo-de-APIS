@@ -1,0 +1,41 @@
+<div>
+    <div class="card-header">
+        <h2>Eliminar disco</h2>
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="mb-3">
+                <label for="id" class="from-label">ID</label>
+                <input disabled type="text" class="from-control" id="id" name="id" [(ngModel)]="disco.id">
+                <div id="emailHelp" class="from-text"> El ID debe ser único e irrepetible </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="nombre" class="from-label">Nombre</label>
+                <input disabled type="text" class="from-control" id="nombre" name="nombre" [(ngModel)]="disco.nombre">
+            </div>
+
+            <div class="mb-3">
+                <label for="artista" class="from-label">Artista</label>
+                <input disabled type="text" class="from-control" id="artista" name="artista" [(ngModel)]="disco.artista">
+            </div>
+
+            <div class="mb-3">
+                <label for="numcanciones" class="from-label">Numcanciones</label>
+                <input disabled type="text" class="from-control" id="numcanciones" name="numcanciones" [(ngModel)]="disco.numcanciones">
+            </div>
+
+            <div class="mb-3">
+                <label for="idioma" class="from-label">Idioma</label>
+                <input disabled type="text" class="from-control" id="idioma" name="idioma" [(ngModel)]="disco.idioma">
+            </div>
+
+            <div class="mb-3">
+                <label for="genero" class="from-label">Genero</label>
+                <input disabled type="text" class="from-control" id="genero" name="genero" [(ngModel)]="disco.genero">
+            </div>
+
+        </form>
+        <button class="btn btn-outline-success" type="button" (click)="eliminar()">Eliminar</button>
+    </div>
+</div>

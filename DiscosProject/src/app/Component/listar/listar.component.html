@@ -1,0 +1,108 @@
+<div class="card">
+    <div class="card-header">
+        <h2>Listado de discos</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-info">
+            <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Artista</th>
+                    <th class="text-center">Numcanciones</th>
+                    <th class="text-center">Idioma</th>
+                    <th class="text-center">Genero</th>
+                    <th class="text-center">Editar</th>
+                    <th class="text-center">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let disco of discos">
+                    <td class="text-center">{{disco.id}}</td>
+                    <td class="text-center">{{disco.nombre}}</td>
+                    <td class="text-center">{{disco.artista}}</td>
+                    <td class="text-center">{{disco.numcanciones}}</td>
+                    <td class="text-center">{{disco.idioma}}</td>
+                    <td class="text-center">{{disco.genero}}</td>
+                    <td class="text-center"><button class="btn btn-outline-warning" type="button" (click)="editar(disco)" >Editar</button></td>
+                    <td class="text-center"><button class="btn btn-outline-danger" type="button" (click)="eliminar(disco)" >Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h2>Busqueda por artista</h2>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="artista" class="from-label">Artista</label>
+            <input #busArt type="text" class="from-control" id="artista" name="artista">
+            <button class="btn btn-outline-success" type="submit" (click)="buscarart(busArt.value)">Buscar</button>
+        </div>
+
+        <table class="table table-info">
+            <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Artista</th>
+                    <th class="text-center">Numcanciones</th>
+                    <th class="text-center">Idioma</th>
+                    <th class="text-center">Genero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listA of mismoArt">
+                    <td class="text-center">{{listA.id}}</td>
+                    <td class="text-center">{{listA.nombre}}</td>
+                    <td class="text-center">{{listA.artista}}</td>
+                    <td class="text-center">{{listA.numcanciones}}</td>
+                    <td class="text-center">{{listA.idioma}}</td>
+                    <td class="text-center">{{listA.genero}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h2>Busqueda por genero</h2>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <label for="genero" class="from-label">Genero</label>
+            <input #busGen type="text" class="from-control" id="genero" name="genero">
+            <button class="btn btn-outline-success" type="submit" (click)="buscargen(busGen.value)">Buscar</button>
+        </div>
+
+        <table class="table table-info">
+            <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Artista</th>
+                    <th class="text-center">Numcanciones</th>
+                    <th class="text-center">Idioma</th>
+                    <th class="text-center">Genero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let listG of mismoGen">
+                    <td class="text-center">{{listG.id}}</td>
+                    <td class="text-center">{{listG.nombre}}</td>
+                    <td class="text-center">{{listG.artista}}</td>
+                    <td class="text-center">{{listG.numcanciones}}</td>
+                    <td class="text-center">{{listG.idioma}}</td>
+                    <td class="text-center">{{listG.genero}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
